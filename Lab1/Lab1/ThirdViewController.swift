@@ -14,6 +14,7 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
     var recorder:AVAudioRecorder!
     var player:AVAudioPlayer!
     
+    @IBOutlet weak var quickReplay: UISwitch!
     @IBAction func record(_ sender: Any) {
         recorder.record()
         print("Recording")
@@ -23,6 +24,10 @@ class ThirdViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecor
         do {
             try player = AVAudioPlayer(contentsOf: (recorder?.url)!)
             player!.delegate = self
+            player!.enableRate = true
+            if(quickReplay.isOn){
+                player.rate = 3.0
+            }
             player!.prepareToPlay()
             print("Playing")
             player!.play()

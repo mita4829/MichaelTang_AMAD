@@ -97,19 +97,38 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lDF-TP-41Y">
+                                <rect key="frame" x="92" y="267" width="201.5" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="swQ-py-5hK">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Speed replay at 3x" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAa-Ns-F6d">
+                                        <rect key="frame" x="59" y="0.0" width="142.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Ey3-22-qOt" firstAttribute="centerX" secondItem="Hcq-aa-6iv" secondAttribute="centerX" id="1Hv-9Q-PBu"/>
+                            <constraint firstItem="lDF-TP-41Y" firstAttribute="leading" secondItem="Ey3-22-qOt" secondAttribute="leading" id="7zk-ww-BOh"/>
+                            <constraint firstItem="Ey3-22-qOt" firstAttribute="top" secondItem="lDF-TP-41Y" secondAttribute="bottom" constant="20" id="Cqb-V4-e7k"/>
                             <constraint firstItem="Ey3-22-qOt" firstAttribute="centerY" secondItem="Hcq-aa-6iv" secondAttribute="centerY" id="RR2-WO-7s4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="5A1-Oh-2z7"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Recorder" image="first" id="seR-Kn-MJC"/>
+                    <connections>
+                        <outlet property="quickReplay" destination="swQ-py-5hK" id="EGz-QW-O1o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oVk-vF-wVO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="-321"/>
+            <point key="canvasLocation" x="1472.8" y="-321.58920539730138"/>
         </scene>
         <!--Find Green-->
         <scene sceneID="wg7-f3-ORb">
