@@ -12,5 +12,7 @@
   <b><li>Do some research -- do similar apps exist? If so, how will yours be better or different? Research enough to know that what you're proposing is possible.</li></b>
   Google translate has the feature of optical character recognition (OCR) of translating image text to another language; however, it does not have the reminder function as that will be different. 
   <b><li>Where will you get any content needed for your app? This could include text, formulas, whatever your app requires.</li></b>
-  I will be photoshopping all needed images/buttons/icons. The mathematical formulas and algorithms will come from resources in my computer vision class. 
+  I will be photoshopping all needed images/buttons/icons. The mathematical formulas and algorithms will come from resources in my computer vision class.
+
 </ul>
+![Alt text](https://github.com/mita4829/MichaelTang_AMAD/blob/master/Project1/ss.JPG "Screen shots")
