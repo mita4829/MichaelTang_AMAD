@@ -1,5 +1,5 @@
 # Milestone 1
-
+![Alt text](https://github.com/mita4829/MichaelTang_AMAD/blob/master/Project1/ss.JPG "Screen shots")
 <ul>
   <b><li>Description of your app including your app's inspiration and goal.</li></b>
   I will be making a reminder list app using tableViews and persistent data with property lists. I will also be experimenting with the camera. My goal is to have the 
@@ -15,4 +15,4 @@
   I will be photoshopping all needed images/buttons/icons. The mathematical formulas and algorithms will come from resources in my computer vision class.
 
 </ul>
-![Alt text](https://github.com/mita4829/MichaelTang_AMAD/blob/master/Project1/ss.JPG "Screen shots")
+
