@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Snacks</key>
+	<array>
+		<string>Chocolate Avocado Pudding</string>
+		<string>Green Tea Avocado Popsicles</string>
+		<string>Avocado Sorbet</string>
+	</array>
+	<key>Breakfast</key>
+	<array>
+		<string>Baked Egg in Avocado</string>
+		<string>Avocado Buckwheat Pancakes</string>
+		<string>Avocado &amp; Egg Breakfast Pizza</string>
+		<string>Avocado Toast</string>
+	</array>
+	<key>Lunch</key>
+	<array>
+		<string>Avocado Watermelon Salad</string>
+		<string>Avocado Egg Salad</string>
+		<string>Peach Basil Avocado Balsamic Wrap</string>
+	</array>
+	<key>Dinner</key>
+	<array>
+		<string>Chicken Avocado Burger</string>
+		<string>Chicken &amp; Avocado Enchiladas</string>
+		<string>Avocado Lime Salmon</string>
+	</array>
+</dict>
+</plist>
