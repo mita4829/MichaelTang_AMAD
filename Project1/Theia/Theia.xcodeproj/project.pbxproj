@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6D246656204444E20016326A /* LearningModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D246655204444E20016326A /* LearningModel.swift */; };
+		6DB37C512051FB7600809F57 /* remindersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DB37C502051FB7600809F57 /* remindersList.plist */; };
 		6DB3B468202EA8EA004CD7CB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3B467202EA8EA004CD7CB /* AppDelegate.swift */; };
 		6DB3B46A202EA8EA004CD7CB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3B469202EA8EA004CD7CB /* FirstViewController.swift */; };
 		6DB3B46C202EA8EA004CD7CB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB3B46B202EA8EA004CD7CB /* SecondViewController.swift */; };
@@ -16,11 +17,11 @@
 		6DB3B474202EA8EA004CD7CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DB3B472202EA8EA004CD7CB /* LaunchScreen.storyboard */; };
 		6DE065CC203C840B008BFA25 /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE065CB203C840B008BFA25 /* Reminders.swift */; };
 		6DE065CE203C88AC008BFA25 /* NewReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DE065CD203C88AC008BFA25 /* NewReminderViewController.swift */; };
-		6DE065D0203C8D51008BFA25 /* remindersList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6DE065CF203C8D51008BFA25 /* remindersList.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6D246655204444E20016326A /* LearningModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningModel.swift; sourceTree = "<group>"; };
+		6DB37C502051FB7600809F57 /* remindersList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = remindersList.plist; sourceTree = "<group>"; };
 		6DB3B464202EA8EA004CD7CB /* Theia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Theia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DB3B467202EA8EA004CD7CB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DB3B469202EA8EA004CD7CB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -31,7 +32,6 @@
 		6DB3B475202EA8EA004CD7CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6DE065CB203C840B008BFA25 /* Reminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
 		6DE065CD203C88AC008BFA25 /* NewReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReminderViewController.swift; sourceTree = "<group>"; };
-		6DE065CF203C8D51008BFA25 /* remindersList.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = remindersList.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +69,7 @@
 				6D246655204444E20016326A /* LearningModel.swift */,
 				6DB3B46B202EA8EA004CD7CB /* SecondViewController.swift */,
 				6DB3B46D202EA8EA004CD7CB /* Main.storyboard */,
-				6DE065CF203C8D51008BFA25 /* remindersList.plist */,
+				6DB37C502051FB7600809F57 /* remindersList.plist */,
 				6DE065CD203C88AC008BFA25 /* NewReminderViewController.swift */,
 				6DE065CB203C840B008BFA25 /* Reminders.swift */,
 				6DB3B470202EA8EA004CD7CB /*  .xcassets */,
@@ -140,7 +140,7 @@
 			files = (
 				6DB3B474202EA8EA004CD7CB /* LaunchScreen.storyboard in Resources */,
 				6DB3B471202EA8EA004CD7CB /*  .xcassets in Resources */,
-				6DE065D0203C8D51008BFA25 /* remindersList.plist in Resources */,
+				6DB37C512051FB7600809F57 /* remindersList.plist in Resources */,
 				6DB3B46F202EA8EA004CD7CB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

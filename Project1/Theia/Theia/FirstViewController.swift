@@ -12,7 +12,7 @@ import AVFoundation
 /*A constant weight to determine which pixel is filled versus empty. Threshold takes on values in the range [0,1]
  The closer to 1, the more lenient the filter algorithm will be in allowing a pixel to be filled.
  */
-let THRESHOLD:Double = 0.4
+let THRESHOLD:Double = 0.5
 let CELL_SIZE:Int = 20
 
 class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -72,6 +72,15 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
         }else{
             print("This device does not have a camera.")
         }
+    }
+    
+    @IBAction func analyzeSavedPhoto(_ sender: UIButton) {
+        view.endEditing(true)
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = .photoLibrary
+        
+        self.present(imagePicker,animated: true,completion: nil)
     }
     
     

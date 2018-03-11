@@ -4,9 +4,9 @@
 <dict>
 	<key>Reminders</key>
 	<array>
-		<string>BREAD</string>
-		<string>EGGS</string>
 		<string>MILK</string>
+		<string>EGGS</string>
+		<string>BREAD</string>
 	</array>
 </dict>
 </plist>

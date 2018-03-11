@@ -14,6 +14,8 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableView: UITableView!
     var reminders:[String] = []
     var ReminderInstances:[Reminders] = []
+    let userFilename:String = "session.plist"
+    let avocadoDishesFilename:String = "remindersList"
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reminder", for: indexPath)
@@ -26,7 +28,51 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     }
 
     func loadData() -> Void {
-        self.reminders = ["MILK", "EGGS", "BREAD"]
+        let url:URL?
+        
+        let dirPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docDir = dirPath[0]
+        
+        let usersAvocadoDataFile = docDir.appendingPathComponent(userFilename)
+        
+        if FileManager.default.fileExists(atPath: usersAvocadoDataFile.path){
+            url = usersAvocadoDataFile
+        }
+        else {
+            url = Bundle.main.url(forResource: avocadoDishesFilename, withExtension: "plist")
+        }
+        
+        let plistdecoder = PropertyListDecoder()
+        do {
+            let data = try Data(contentsOf: url!)
+            let JSON = try plistdecoder.decode([String:[String]].self, from: data)
+            print(JSON)
+            reminders = JSON["Reminders"]!
+        } catch {
+            print(error)
+        }
+        
+        let app = UIApplication.shared
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(SecondViewController.applicationWillResignActive(_:)), name: NSNotification.Name.UIApplicationWillResignActive, object: app)
+    }
+    
+    @objc func applicationWillResignActive(_ notification: NSNotification){
+        //get path for data file
+        let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let docDir = path[0]
+        print(docDir)
+        
+        let url = docDir.appendingPathComponent(userFilename)
+        print(url)
+        let plistEncoder = PropertyListEncoder()
+        plistEncoder.outputFormat = .xml
+        do {
+            let data = try plistEncoder.encode(["Reminders":reminders])
+            try data.write(to: url)
+        } catch {
+            print(error)
+        }
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -42,10 +88,9 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             self.reminders.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
-    }
+    }    
     
     func createNotification(reminder r: Reminders) -> Void {
-        print("Called")
         /*Reference on how to make local notifications here: https://useyourloaf.com/blog/local-notifications-with-ios-10/ */
          let options:UNAuthorizationOptions = [.alert, .sound]
          let center = UNUserNotificationCenter.current()
@@ -88,13 +133,14 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.largeTitleDisplayMode = .always
-        loadData()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.loadData()
         
         
         // Do any additional setup after loading the view, typically from a nib.
     }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -107,13 +153,15 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             if(!source.recognizedText.isEmpty){
                 let recognizedText:String = source.recognizedText
                 let reminderInstance:Reminders = source.reminderInstance
-                /*Create new notification here*/
                 
-                self.createNotification(reminder: reminderInstance)
-                if((reminderInstance.timeDifference > 0 && reminderInstance.notifiy) || !reminderInstance.notifiy){
-                    self.reminders.append(recognizedText)
-                    self.tableView.reloadData()
-                }
+                /*Create new notification here if the timeDiff > 0 and the user wants notification or no notification*/                
+                
+                if(reminderInstance.notifiy && reminderInstance.timeDifference > 0){
+                    self.createNotification(reminder: reminderInstance)
+                }                
+                self.reminders.append(recognizedText)
+                self.tableView.reloadData()
+
                 
                 /*Give the learning model confirmation on the set it just learned*/
                 learn(correctString: recognizedText)
