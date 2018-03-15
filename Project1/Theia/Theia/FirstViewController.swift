@@ -12,7 +12,7 @@ import AVFoundation
 /*A constant weight to determine which pixel is filled versus empty. Threshold takes on values in the range [0,1]
  The closer to 1, the more lenient the filter algorithm will be in allowing a pixel to be filled.
  */
-let THRESHOLD:Double = 0.5
+let THRESHOLD:Double = 0.3
 let CELL_SIZE:Int = 20
 
 class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -224,7 +224,7 @@ class FirstViewController: UIViewController, UIImagePickerControllerDelegate, UI
             print("Prefered set \(score) > \(highestMatch) for \(highestMatchCharFromLearnedSet) against \(highestMatchCharacter)")
             highestMatchCharacter = highestMatchCharFromLearnedSet
         }
-        /*Add matrix to the learning model, so it can become an scary-evil AI that can read only captial-handwritten text 😳 */
+        /*Add matrix to the learning model, so it can become a scary-evil AI that can read only captial-handwritten text 😳 */
         correctMatrices.append(m)
         
         return highestMatchCharacter
