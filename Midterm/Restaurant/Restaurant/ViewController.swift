@@ -104,7 +104,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //                filteredDishes = dishArray
 //                avocadoDishesTableView.reloadData()
 //            }
+            let r = source.newRestaurant
+            restaurantInstances.append(r)
+            self.tableView.reloadData()
             print("done")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            //Delete the country from the array
+            self.restaurantInstances.remove(at: indexPath.row)
+            // Delete the row from the table
+            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     

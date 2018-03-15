@@ -113,7 +113,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="QYD-Xh-CNs">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="cs8-t5-7Bz"/>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="cs8-t5-7Bz">
+                                            <connections>
+                                                <segue destination="Vo6-Qn-t5Q" kind="unwind" unwindAction="unwindSegueWithSegue:" id="LR4-z0-m3f"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="KX9-ne-ou0">
                                             <connections>
                                                 <segue destination="Vo6-Qn-t5Q" kind="unwind" identifier="done" unwindAction="unwindSegueWithSegue:" id="OSZ-ik-KRQ"/>
