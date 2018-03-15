@@ -7,13 +7,47 @@
 //
 
 import UIKit
+import WebKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController,  WKNavigationDelegate {
 
+    @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var webSpinner: UIActivityIndicatorView!
+    
+    var restaurantInstance: AnyObject? {
+        didSet {
+            self.configureView()
+        }
+    }
+    
+    func configureView() -> Void {
+        if let detail = self.restaurantInstance {
+            //loadWebPage(detail.description)
+            loadWebPage(detail.description)
+        }
+    }
+    
+    func loadWebPage(_ urlString: String){
+
+        let myurl = URL(string: urlString)
+        let request = URLRequest(url: myurl!)
+
+        //webView.load(request)
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        webSpinner.startAnimating()
+    }
+
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        webSpinner.stopAnimating()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        navigationItem.largeTitleDisplayMode = .never
+        webView.navigationDelegate = self
+        self.configureView()
     }
 
     override func didReceiveMemoryWarning() {

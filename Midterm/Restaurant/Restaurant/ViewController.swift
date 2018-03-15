@@ -75,6 +75,47 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         session.resume()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "moreDetailSegue" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let restaurant:Restaurant = restaurantInstances[indexPath.row]
+                let name = restaurant.name
+                let url = restaurant.url
+                
+                let controller = segue.destination as! DetailViewController
+                
+                controller.restaurantInstance = url as AnyObject?
+                controller.title = name
+                //controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
+                //controller.navigationItem.leftItemsSupplementBackButton = true
+            }
+        }
+    }
+    
+    
+    @IBAction func unwindSegue(segue: UIStoryboardSegue){
+        if(segue.identifier == "done"){
+//            let source:NewAvocadoDish = segue.source as! NewAvocadoDish
+            let source:NewRestaurantViewController = segue.source as! NewRestaurantViewController
+//            if(!source.newDish.isEmpty){
+//                let nameOfNewDish:String = source.newDish
+//                dishArray.append(nameOfNewDish)
+//                dishes.dishes[mealChose] = dishArray
+//                filteredDishes = dishArray
+//                avocadoDishesTableView.reloadData()
+//            }
+            print("done")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.delegate = self
