@@ -32,7 +32,7 @@ class DetailViewController: UIViewController,  WKNavigationDelegate {
         let myurl = URL(string: urlString)
         let request = URLRequest(url: myurl!)
 
-        //webView.load(request)
+        webView.load(request)
     }
     
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {

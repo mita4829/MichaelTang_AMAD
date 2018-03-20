@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>153396248015-pi2q488e7bq3t7afepaiu6e331nd9qe7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.153396248015-pi2q488e7bq3t7afepaiu6e331nd9qe7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBZU_3d05F5jQVVSWLAfvS5m3tPp4yk2_U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>153396248015</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>michael.Cipher</string>
+	<key>PROJECT_ID</key>
+	<string>cipher-48edb</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cipher-48edb.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true></true>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false></false>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:153396248015:ios:b2e84f3807959f82</string>
+	<key>DATABASE_URL</key>
+	<string>https://cipher-48edb.firebaseio.com</string>
+</dict>
+</plist>
