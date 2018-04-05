@@ -3,7 +3,7 @@
     <string name="apples">Apples</string>
     <string-array name="apple_types">
         <item>Red Delicious</item>
-        <item>Fugi</item>
+        <item>Golden Delicious</item>
         <item>Granny Smith</item>
     </string-array>
     <string name="apple_image">Apple picture</string>

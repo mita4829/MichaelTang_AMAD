@@ -3,6 +3,6 @@
     <item
         android:id="@+id/learn_more"
         android:title="@string/learnMore"
-        android:icon="@drawable/apple"
+        android:icon="@drawable/red_declious"
         android:showAsAction="ifRoom" />
 </menu>

@@ -17,9 +17,9 @@ public class Apple {
 
     public static final Apple[] fruits = {
         /*Work here once images are done*/
-            new Apple("Red Delcious", R.drawable.apple, false),
-            new Apple("Fugi", R.drawable.apple, false),
-            new Apple("Granny Smith", R.drawable.apple, true),
+            new Apple("Red Delicious", R.drawable.red_declious, false),
+            new Apple("Golden Delicious", R.drawable.golden_declious, false),
+            new Apple("Granny Smith", R.drawable.granny_smith, true),
     };
 
     public String getName(){
