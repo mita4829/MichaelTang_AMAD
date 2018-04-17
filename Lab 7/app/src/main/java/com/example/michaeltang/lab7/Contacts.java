@@ -18,8 +18,8 @@ public class Contacts {
     }
 
     public static final Contacts[] myContacts = {
-            new Contacts("school", new ArrayList<String>(Arrays.asList("Michael"))),
-            new Contacts("private", new ArrayList<String>(Arrays.asList("Michael")))
+            new Contacts("School", new ArrayList<String>(Arrays.asList("Michael"))),
+            new Contacts("Private", new ArrayList<String>(Arrays.asList("Michael")))
     };
 
     public String getCategory(){
