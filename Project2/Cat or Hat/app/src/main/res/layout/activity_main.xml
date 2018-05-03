@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.michaeltang.catorhat.MainActivity">
+
+    <ImageView
+        android:id="@+id/catOrHatImageView"
+        android:layout_width="269dp"
+        android:layout_height="258dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/catorhatDesc"
+        app:layout_constraintBottom_toTopOf="@+id/catButton"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <Button
+        android:id="@+id/catButton"
+        android:layout_width="167dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/catButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <Button
+        android:id="@+id/hatButton"
+        android:layout_width="165dp"
+        android:layout_height="99dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/hatButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
