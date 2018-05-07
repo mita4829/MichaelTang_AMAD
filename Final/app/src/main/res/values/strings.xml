@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Michael_Tang_Final</string>
+    <string-array name="workout">
+        <item>Cardio</item>
+        <item>Strength</item>
+        <item>Flexibility</item>
+    </string-array>
+    <string name="title_activity_activities">Activities</string>
+</resources>
